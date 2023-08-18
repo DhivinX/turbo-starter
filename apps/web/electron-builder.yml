@@ -1,0 +1,30 @@
+##
+# @see https://www.electron.build/configuration/configuration
+##
+
+appId: "turbo-nestjs-vue"
+asar: true
+
+directories:
+  output: "dist/electron/release/${version}"
+
+files:
+  - "dist"
+
+mac:
+  artifactName: "${productName}_${version}.${ext}"
+  target:
+    - "dmg"
+
+win:
+  artifactName: "${productName}_${version}.${ext}"
+  target:
+    - target: "nsis"
+      arch:
+        - "x64"
+
+nsis:
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+  deleteAppDataOnUninstall: false

@@ -9,7 +9,6 @@ import { quasar, transformAssetUrls } from '@quasar/vite-plugin';
 import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite';
 import checker from 'vite-plugin-checker';
 import electron from 'vite-plugin-electron';
-import viteTsConfigPaths from 'vite-tsconfig-paths';
 
 const resolve = (p: string) => path.resolve(__dirname, p);
 
@@ -24,7 +23,6 @@ export default defineConfig({
   },
 
   base: process.env.VITE_IS_ELECTRON_APP ? './' : '/',
-  cacheDir: '../../node_modules/.vite-web',
   clearScreen: true,
   assetsInclude: /\.(pdf|jpg|png|svg)$/,
 
@@ -37,10 +35,6 @@ export default defineConfig({
   publicDir: resolve('./src/public'),
 
   plugins: [
-    viteTsConfigPaths({
-      projects: [resolve('../../tsconfig.base.json')],
-    }),
-
     Vue({
       template: {
         transformAssetUrls,
@@ -79,7 +73,7 @@ export default defineConfig({
             vite: {
               build: {
                 sourcemap: true,
-                outDir: 'dist/apps/web/electron/main',
+                outDir: 'dist/electron/main',
               },
             },
           },
@@ -89,7 +83,7 @@ export default defineConfig({
             vite: {
               build: {
                 sourcemap: 'inline',
-                outDir: 'dist/apps/web/electron/preload',
+                outDir: 'dist/electron/preload',
               },
             },
             onstart(options) {
@@ -102,9 +96,6 @@ export default defineConfig({
 
   test: {
     globals: true,
-    cache: {
-      dir: '../../node_modules/.vitest',
-    },
     environment: 'jsdom',
     include: ['src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
   },
