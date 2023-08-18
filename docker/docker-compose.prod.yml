@@ -1,0 +1,47 @@
+version: "3.8"
+
+services:
+  api:
+    container_name: turbo-starter-api
+    image: dhivinx/turbo-starter-api:0.0.1
+    build:
+      context: .
+      dockerfile: ./docker/api/Dockerfile.prod
+    env_file:
+      - .env.dev
+    ports:
+      - ${API_HTTP_PORT}:${API_HTTP_PORT}
+    depends_on:
+      - postgres
+    restart: always
+
+  web:
+    container_name: turbo-starter-web
+    image: dhivinx/turbo-starter-web:0.0.1
+    build:
+      context: .
+      dockerfile: ./docker/web/Dockerfile.prod
+    env_file:
+      - .env.prod
+    ports:
+      - 8080:8080
+    depends_on:
+      - api
+    restart: always
+
+  postgres:
+    container_name: postgres
+    image: postgres
+    env_file:
+      - .env.prod
+    volumes:
+      - postgres-data:/data/db
+    environment:
+      - POSTGRES_DB=${DATABASE_NAME}
+      - POSTGRES_USER=${DATABASE_USER}
+      - POSTGRES_PASSWORD=${DATABASE_PASSWORD}
+    restart: unless-stopped
+
+volumes:
+  postgres-data:
+

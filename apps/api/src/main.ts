@@ -43,7 +43,7 @@ async function bootstrap() {
   app.useGlobalPipes(new ZodValidationPipe());
   app.useStaticAssets(publicDir());
 
-  const config = new DocumentBuilder().setTitle('turbo-nestjs-vue').setVersion('0.1').build();
+  const config = new DocumentBuilder().setTitle('turbo-starter').setVersion('0.1').build();
 
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api-docs', app, document);

@@ -13,7 +13,7 @@ import './assets/main.scss';
 
 import App from './app/App.vue';
 import { config } from './config';
-import { zodErrorMapInit } from './common';
+import { zodErrorMapInit } from 'shared';
 
 veeConfigure({
   validateOnInput: true,

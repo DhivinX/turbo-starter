@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+body:not(i) {
+    font-family: 'Poppins', sans-serif;
+}
+
+.app-header {
+    box-shadow: 0 12px 12px -12px rgb(0 0 0 / 20%);
+}
+
+.app-drawer {
+    background-color: #111827;
+    color: #ffffff;
+    box-shadow: 0px 0px 12px rgb(0 0 0 / 20%);
+}
+
+.app-page-container {
+    background-color: #f1f5f9;
+    min-height: 100px;
+}
+
+.container {
+    margin: auto;
+    padding: 38px;
+    max-width: 1600px;
+
+    @media (max-width: 600px){
+        padding: 18px;
+    }
+}
+
+.border-bottom-accent {
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.q-card {
+    border-radius: 20px;
+    box-shadow: 0px 2px 3px -3px rgba(66, 68, 90, 0.72);
+    display: flex;
+    flex-direction: column;
+
+    .card-title {
+        font-weight: 500;
+        font-size: 24px;
+        margin-bottom: 5px;
+    }
+
+    >form{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .q-card__section {
+        padding: 10px 30px;
+
+        &:first-child {
+            padding-top: 30px;
+        }
+
+        &:last-child {
+            padding-bottom: 30px;
+        }
+    }
+
+    .q-card__actions {
+        padding: 30px;
+        display: flex;
+        align-items: flex-end;
+        flex-grow: 1;
+
+        .q-btn {
+            font-size: 14px;
+            padding: 8px 15px 8px 15px;
+        }
+    }
+}
+
+.q-pagination {
+    .q-btn {
+        font-size: 14px;
+        line-height: 13px;
+        padding: 8px !important;
+    }
+}
+
+.q-dialog-max-width {
+    width: 100%;
+    max-width: 500px;
+}

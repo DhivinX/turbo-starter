@@ -13,6 +13,8 @@
       "dependsOn": ["^build"]
     },
     "build:electron": {},
+    "android": {},
+    "ios": {},
     "start": {
       "cache": false
     },
