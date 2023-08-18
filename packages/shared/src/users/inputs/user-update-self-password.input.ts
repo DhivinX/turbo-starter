@@ -8,8 +8,8 @@ export const userUpdateSelfPasswordSchema = z
     repeatPassword: z.string().min(6),
   })
   .refine((data) => data.newPassword === data.repeatPassword, {
-    message: 'passwords_do_not_match',
-    path: ['confirm'],
+    message: 'string_password_repeat',
+    path: ['repeatPassword'],
   });
 
 @UseSchema(userUpdateSelfPasswordSchema)
