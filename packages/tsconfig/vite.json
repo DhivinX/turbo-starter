@@ -1,0 +1,18 @@
+{
+  "extends": "./base.json",
+
+  "compilerOptions": {
+    "lib": ["esnext", "dom"],
+    "target": "esnext",
+    "jsx": "preserve",
+    "skipLibCheck": true,
+    "useDefineForClassFields": true,
+
+    "types": [
+      "vite/client",
+      "vitest",
+      "vitest/globals",
+      "@intlify/unplugin-vue-i18n/messages"
+    ]
+  }
+}

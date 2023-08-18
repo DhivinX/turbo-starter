@@ -1,28 +1,12 @@
 {
-  "extends": "tsconfig/base.json",
+  "extends": "tsconfig/vite.json",
 
   "compilerOptions": {
-    "lib": ["esnext", "dom"],
-    "target": "esnext",
-    "jsx": "preserve",
-    "skipLibCheck": true,
-    "useDefineForClassFields": true,
-
-    "types": [
-      "vite/client",
-      "vitest",
-      "vitest/globals",
-      "@intlify/unplugin-vue-i18n/messages"
-    ],
-
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"],
-      "shared": ["../../libs/shared/src/index.ts"]
+      "@/*": ["./src/*"]
     }
   },
-
-  "files": [],
 
   "include": [
     "./src/components.d.ts",
