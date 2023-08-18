@@ -58,3 +58,5 @@ logs
 apps/api/media/*
 !apps/api/media/.gitkeep
 __pycache__
+apps/**/components.d.ts
+apps/**/auto-imports.d.ts
