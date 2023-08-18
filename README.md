@@ -1,10 +1,11 @@
 <p align="center">
-  <a href="https://nestjs.com/" target="blank"><img src="https://user-images.githubusercontent.com/4060187/106504110-82f58d00-6494-11eb-87b7-a16d4f68bc5a.png" width="350" alt="Nest Logo" /></a>
+  <a href="https://turborepo.com/" target="blank"><img src="https://user-images.githubusercontent.com/4060187/106504110-82f58d00-6494-11eb-87b7-a16d4f68bc5a.png" width="350" alt="Turborepo Logo" /></a>
 <p>
 
 <p align="center">
-  <a href="https://vuejs.org/" target="blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/2367px-Vue.js_Logo_2.svg.png" width="90" alt="Vue Logo" /></a>
-  <a href="https://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="90" alt="Nest Logo" /></a>
+  <a href="https://vuejs.org/" target="blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/2367px-Vue.js_Logo_2.svg.png" width="88" alt="Vue Logo" /></a>
+  <a href="https://nuxt.com/" target="blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Nuxt_logo.svg/1200px-Nuxt_logo.svg.png" width="105" alt="Nuxt Logo" /></a>
+  <a href="https://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="88" alt="Nest Logo" /></a>
 </p>
 
 
@@ -146,6 +147,9 @@ More info here: https://vuejs.org/guide/typescript/overview.html#takeover-mode
 * `web:dev:electron` - run front-end in electron application with hot reload
 * `web:build` - build front-end application
 * `web:build:electron` - build electron application with frontend
+* `nuxt:dev` - run nuxt application with hot reload
+* `nuxt:build` - build nuxt application
+* `nuxt:start` - start nuxt application
 * `test` - run tests for all packages and applications
 * `lint` - lint all packages and applications
 * `clean` - remove dist directory from all packages and applications

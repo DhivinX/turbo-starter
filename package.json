@@ -12,6 +12,9 @@
     "web:dev:electron": "dotenv -- turbo dev:electron --no-daemon --filter=web",
     "web:build": "dotenv -- turbo build --no-daemon --filter=web",
     "web:build:electron": "dotenv -- turbo build:electron --no-daemon --filter=web",
+    "nuxt:dev": "dotenv -- turbo dev --no-daemon --filter=web-nuxt",
+    "nuxt:build": "dotenv -- turbo build --no-daemon --filter=web-nuxt",
+    "nuxt:start": "dotenv -- turbo start --no-daemon --filter=web-nuxt",
     "test": "dotenv -- turbo test --no-daemon",
     "lint": "turbo lint --no-daemon",
     "clean": "turbo clean --no-daemon"
