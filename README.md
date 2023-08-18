@@ -160,7 +160,6 @@ More info here: https://vuejs.org/guide/typescript/overview.html#takeover-mode
 
 {
   "recommendations": [
-    "nrwl.angular-console",
     "vue.volar",
     "dbaeumer.vscode-eslint",
     "editorconfig.editorconfig",
@@ -178,7 +177,6 @@ More info here: https://vuejs.org/guide/typescript/overview.html#takeover-mode
 
 ### Required
 
-* `nrwl.angular-console` - Nx Console
 * `vue.volar` - Vue Language Features (Volar)
 * `syler.sass-indented` - Sass syntax highlighting.
 * `dbaeumer.vscode-eslint` - VS Code ESLint extension.
