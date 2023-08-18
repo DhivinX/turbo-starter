@@ -1,19 +1,6 @@
 {
-  "recommendations": [
-      "vue.volar",
-      "dbaeumer.vscode-eslint",
-      "editorconfig.editorconfig",
-      "syler.sass-indented",
-      "eamodio.gitlens",
-      "aaron-bond.better-comments",
-      "visualstudioexptteam.vscodeintellicode",
-      "pkief.material-icon-theme",
-      "mikestead.dotenv",
-      "firsttris.vscode-jest-runner"
-  ],
-
   "npm.exclude": [
     "**/packages/**",
-    "**/apps/**",
+    "**/apps/**"
   ]
 }
