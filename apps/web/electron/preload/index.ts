@@ -1,32 +1,32 @@
 function domReady(condition: DocumentReadyState[] = ['complete', 'interactive']) {
-    return new Promise((resolve) => {
+  return new Promise((resolve) => {
+    if (condition.includes(document.readyState)) {
+      resolve(true);
+    } else {
+      document.addEventListener('readystatechange', () => {
         if (condition.includes(document.readyState)) {
-            resolve(true);
-        } else {
-            document.addEventListener('readystatechange', () => {
-                if (condition.includes(document.readyState)) {
-                    resolve(true);
-                }
-            });
+          resolve(true);
         }
-    });
+      });
+    }
+  });
 }
 
 const safeDOM = {
-    append(parent: HTMLElement, child: HTMLElement) {
-        if (!Array.from(parent.children).find((e) => e === child)) {
-            return parent.appendChild(child);
-        }
+  append(parent: HTMLElement, child: HTMLElement) {
+    if (!Array.from(parent.children).find((e) => e === child)) {
+      return parent.appendChild(child);
+    }
 
-        return null;
-    },
-    remove(parent: HTMLElement, child: HTMLElement) {
-        if (Array.from(parent.children).find((e) => e === child)) {
-            return parent.removeChild(child);
-        }
+    return null;
+  },
+  remove(parent: HTMLElement, child: HTMLElement) {
+    if (Array.from(parent.children).find((e) => e === child)) {
+      return parent.removeChild(child);
+    }
 
-        return null;
-    },
+    return null;
+  },
 };
 
 /**
@@ -36,8 +36,8 @@ const safeDOM = {
  * https://matejkustec.github.io/SpinThatShit
  */
 function useLoading() {
-    const className = `lds-ring`;
-    const styleContent = `
+  const className = `lds-ring`;
+  const styleContent = `
         .app-loading-wrap {
             position: fixed;
             top: 0;
@@ -93,23 +93,23 @@ function useLoading() {
         }
     `;
 
-    const oStyle = document.createElement('style');
-    oStyle.innerHTML = styleContent;
+  const oStyle = document.createElement('style');
+  oStyle.innerHTML = styleContent;
 
-    const oDiv = document.createElement('div');
-    oDiv.className = 'app-loading-wrap';
-    oDiv.innerHTML = `<div class="${className}"><div></div><div></div><div></div><div></div></div>`;
+  const oDiv = document.createElement('div');
+  oDiv.className = 'app-loading-wrap';
+  oDiv.innerHTML = `<div class="${className}"><div></div><div></div><div></div><div></div></div>`;
 
-    return {
-        appendLoading() {
-            safeDOM.append(document.head, oStyle);
-            safeDOM.append(document.body, oDiv);
-        },
-        removeLoading() {
-            safeDOM.remove(document.head, oStyle);
-            safeDOM.remove(document.body, oDiv);
-        },
-    };
+  return {
+    appendLoading() {
+      safeDOM.append(document.head, oStyle);
+      safeDOM.append(document.body, oDiv);
+    },
+    removeLoading() {
+      safeDOM.remove(document.head, oStyle);
+      safeDOM.remove(document.body, oDiv);
+    },
+  };
 }
 
 // ----------------------------------------------------------------------
@@ -118,7 +118,7 @@ const { appendLoading, removeLoading } = useLoading();
 domReady().then(appendLoading);
 
 window.onmessage = (ev) => {
-    ev.data.payload === 'removeLoading' && removeLoading();
+  ev.data.payload === 'removeLoading' && removeLoading();
 };
 
 setTimeout(removeLoading, 30000);

@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
-    "lint": "eslint \"{src,apps,libs,test}/**/*.{ts,vue,js}\" --fix"
+    "lint": "eslint \"{src,apps,libs,test,electron}/**/*.{ts,vue,js}\" --fix"
   },
   "dependencies": {
     "@quasar/extras": "1.16.4",

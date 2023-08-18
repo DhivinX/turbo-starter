@@ -1,8 +1,8 @@
 process.env.DIST = join(__dirname, '../..');
 console.log(process.env.DIST);
 process.env.PUBLIC = app.isPackaged
-    ? process.env.DIST
-    : join(__dirname, '../../../../../apps/web/src/public');
+  ? process.env.DIST
+  : join(__dirname, '../../../../../apps/web/src/public');
 
 import { app, BrowserWindow, shell, ipcMain } from 'electron';
 import { release } from 'os';
@@ -15,8 +15,8 @@ if (release().startsWith('6.1')) app.disableHardwareAcceleration();
 if (process.platform === 'win32') app.setAppUserModelId(app.getName());
 
 if (!app.requestSingleInstanceLock()) {
-    app.quit();
-    process.exit(0);
+  app.quit();
+  process.exit(0);
 }
 
 // Remove electron security warnings
@@ -31,77 +31,77 @@ const url = process.env.VITE_DEV_SERVER_URL as string;
 const indexHtml = join(process.env.DIST, 'index.html');
 
 async function createWindow() {
-    win = new BrowserWindow({
-        width: 1280,
-        height: 800,
-        autoHideMenuBar: true,
-        icon: join(process.env.PUBLIC, 'favicon.ico'),
-        webPreferences: {
-            preload,
-            // Warning: Enable nodeIntegration and disable contextIsolation is not secure in production
-            // Consider using contextBridge.exposeInMainWorld
-            // Read more on https://www.electronjs.org/docs/latest/tutorial/context-isolation
-            nodeIntegration: true,
-            contextIsolation: false,
-        },
-    });
+  win = new BrowserWindow({
+    width: 1280,
+    height: 800,
+    autoHideMenuBar: true,
+    icon: join(process.env.PUBLIC, 'favicon.ico'),
+    webPreferences: {
+      preload,
+      // Warning: Enable nodeIntegration and disable contextIsolation is not secure in production
+      // Consider using contextBridge.exposeInMainWorld
+      // Read more on https://www.electronjs.org/docs/latest/tutorial/context-isolation
+      nodeIntegration: true,
+      contextIsolation: false,
+    },
+  });
 
-    if (app.isPackaged) {
-        win.loadFile(indexHtml);
-    } else {
-        win.loadURL(url);
-        // Open devTool if the app is not packaged
-        win.webContents.openDevTools();
-    }
+  if (app.isPackaged) {
+    win.loadFile(indexHtml);
+  } else {
+    win.loadURL(url);
+    // Open devTool if the app is not packaged
+    win.webContents.openDevTools();
+  }
 
-    // Test actively push message to the Electron-Renderer
-    win.webContents.on('did-finish-load', () => {
-        win?.webContents.send('main-process-message', new Date().toLocaleString());
-    });
+  // Test actively push message to the Electron-Renderer
+  win.webContents.on('did-finish-load', () => {
+    win?.webContents.send('main-process-message', new Date().toLocaleString());
+  });
 
-    // Make all links open with the browser, not with the application
-    win.webContents.setWindowOpenHandler(({ url }) => {
-        if (url.startsWith('https:')) shell.openExternal(url);
-        return { action: 'deny' };
-    });
+  // Make all links open with the browser, not with the application
+  win.webContents.setWindowOpenHandler(({ url }) => {
+    if (url.startsWith('https:')) shell.openExternal(url);
+    return { action: 'deny' };
+  });
 }
 
 app.whenReady().then(createWindow);
 
 app.on('window-all-closed', () => {
-    win = null;
-    if (process.platform !== 'darwin') app.quit();
+  win = null;
+  if (process.platform !== 'darwin') app.quit();
 });
 
 app.on('second-instance', () => {
-    if (win) {
-        // Focus on the main window if the user tried to open another
-        if (win.isMinimized()) win.restore();
-        win.focus();
-    }
+  if (win) {
+    // Focus on the main window if the user tried to open another
+    if (win.isMinimized()) win.restore();
+    win.focus();
+  }
 });
 
 app.on('activate', () => {
-    const allWindows = BrowserWindow.getAllWindows();
-    if (allWindows.length) {
-        allWindows[0].focus();
-    } else {
-        createWindow();
-    }
+  const allWindows = BrowserWindow.getAllWindows();
+  if (allWindows.length) {
+    allWindows[0].focus();
+  } else {
+    createWindow();
+  }
 });
 
 // new window example arg: new windows url
 ipcMain.handle('open-win', (_event, arg) => {
-    const childWindow = new BrowserWindow({
-        webPreferences: {
-            preload,
-        },
-    });
+  const childWindow = new BrowserWindow({
+    webPreferences: {
+      preload,
+    },
+  });
 
-    if (app.isPackaged) {
-        childWindow.loadFile(indexHtml, { hash: arg });
-    } else {
-        childWindow.loadURL(`${url}/#${arg}`);
-        // childWindow.webContents.openDevTools({ mode: "undocked", activate: true })
-    }
+  if (app.isPackaged) {
+    childWindow.loadFile(indexHtml, { hash: arg });
+  } else {
+    childWindow.loadURL(`${url}/#${arg}`);
+    // childWindow.webContents.openDevTools({ mode: "undocked", activate: true })
+  }
 });
