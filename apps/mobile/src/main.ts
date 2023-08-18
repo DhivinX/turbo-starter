@@ -41,6 +41,4 @@ app.use(Quasar, {
   },
 });
 
-app.mount('#app').$nextTick(() => {
-  postMessage({ payload: 'removeLoading' }, '*');
-});
+app.mount('#app');

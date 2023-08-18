@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">turbo-starter</string>
+    <string name="title_activity_main">turbo-starter</string>
+    <string name="package_name">com.example.turbo</string>
+    <string name="custom_url_scheme">com.example.turbo</string>
+</resources>

@@ -15,6 +15,10 @@
     "nuxt:dev": "dotenv -- turbo dev --no-daemon --filter=web-nuxt",
     "nuxt:build": "dotenv -- turbo build --no-daemon --filter=web-nuxt",
     "nuxt:start": "dotenv -- turbo start --no-daemon --filter=web-nuxt",
+    "mobile:dev": "dotenv -- turbo dev --no-daemon --filter=mobile",
+    "mobile:build": "dotenv -- turbo build --no-daemon --filter=mobile",
+    "mobile:android": "dotenv -- turbo android --no-daemon --filter=mobile",
+    "mobile:ios": "dotenv -- turbo ios --no-daemon --filter=mobile",
     "test": "dotenv -- turbo test --no-daemon",
     "lint": "turbo lint --no-daemon",
     "clean": "turbo clean --no-daemon"
