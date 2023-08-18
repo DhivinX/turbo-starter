@@ -6,19 +6,17 @@
       "cache": false,
       "persistent": true
     },
+    "dev:electron": {
+      "cache": false
+    },
     "build": {
       "dependsOn": ["^build"]
     },
+    "build:electron": {},
     "start": {
       "cache": false
     },
     "lint": {},
-    "clean": {},
-    "db:generate": {
-      "cache": false
-    },
-    "db:push": {
-      "cache": false
-    }
+    "clean": {}
   }
 }
