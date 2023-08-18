@@ -190,7 +190,7 @@ More info here: https://vuejs.org/guide/typescript/overview.html#takeover-mode
 
 ## Enhancements and Bug Reports
 
-If you find a bug, or have an enhancement in mind please post [issues](https://github.com/DhivinX/nx-nestjs-vue/issues) on GitHub.
+If you find a bug, or have an enhancement in mind please post [issues](https://github.com/DhivinX/turbo-starter/issues) on GitHub.
 
 ## Contribution
 
