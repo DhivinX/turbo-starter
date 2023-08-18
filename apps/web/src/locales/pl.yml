@@ -1,4 +1,4 @@
-app_name: 'turbo-nestjs-vue'
+app_name: 'turbo-starter'
 app_connection_lost: 'Połączenie z serwerem zostało zerwane. Łączenie...'
 
 yes: 'Tak'

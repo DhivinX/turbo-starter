@@ -17,6 +17,7 @@ This repository serves as a ready-to-use toolkit and project skeleton that enabl
 - [Features and Contents](#features-and-contents)
 - [Prerequisites](#prerequisites)
 - [Getting Started](#getting-started)
+- [Getting Started with Docker](#getting-started-with-docker)
 - [Environment Variables](#environment-variables)
 - [Volar and Visual Studio Code (Takeover Mode)](#volar-and-visual-studio-code-takeover-mode)
 - [Top-Level Scripts](#top-level-scripts)
@@ -67,17 +68,39 @@ cd turbo-starter
 # 3. Install the project and build packages in libs folder
 yarn install
 
-# 4. Dev: Run frontend with hot reload 
+# 4. Dev: Run web with hot reload 
 yarn web:dev
 
-# 5. Dev: Run backend with hot reload 
+# 5. Dev: Run API project with hot reload 
 # Note that you need to create the .env file in the project root directory beforehand
 # You can copy the .env.example file and rename it to .env
 # Then you can configure database access and other server settings
 yarn run api:dev
 
-# 6. Or run backend and frontend with hot reload parallel
+# 6. Or run API and WEB projects with hot reload parallel
 yarn run all:dev
+
+```
+
+## Getting Started with Docker
+
+```bash
+
+# 1. Clone the repository
+git clone https://github.com/DhivinX/turbo-starter.git
+
+# 2. Enter your newly-cloned folder
+cd turbo-starter
+
+# 3. Copy env.example to .env.dev and pass wished variables:
+# Change DATABASE_HOST to "postgres"
+cp env.example .env.dev
+
+# 4. Build image:
+yarn docker:dev:build
+
+# 5. Run API and WEB projects development process with hot reload in docker container 
+yarn docker:dev:up
 
 ```
 
@@ -140,19 +163,31 @@ More info here: https://vuejs.org/guide/typescript/overview.html#takeover-mode
 * `all:dev` - run all applications simultaneously with hot reload
 * `all:build` - build all packages and applications
 * `all:start` - start all applications
-* `api:dev` - run back-end with hot reload
-* `api:build` - build back-end application
-* `api:start` - start back-end application
-* `web:dev` - run front-end with hot reload
-* `web:dev:electron` - run front-end in electron application with hot reload
-* `web:build` - build front-end application
-* `web:build:electron` - build electron application with frontend
+* `api:dev` - run API project with hot reload
+* `api:build` - build API project application
+* `api:start` - start API project application
+* `web:dev` - run WEB project with hot reload
+* `web:dev:electron` - run WEB project in electron application with hot reload
+* `web:build` - build WEB project application
+* `web:build:electron` - build electron application with web project
+* `web:start` - boot up a local static web server that serves the files from dist
 * `nuxt:dev` - run nuxt application with hot reload
 * `nuxt:build` - build nuxt application
 * `nuxt:start` - start nuxt application
+* `mobile:dev` - run mobile application with hot reload
+* `mobile:build` - build mobile application
+* `mobile:android` - build mobile application and open in Android Studio
+* `mobile:ios` - build mobile application and open in Xcode
 * `test` - run tests for all packages and applications
 * `lint` - lint all packages and applications
 * `clean` - remove dist directory from all packages and applications
+* `docker:dev:up` - up development docker container
+* `docker:dev:build` - build development docker container
+* `docker:dev:down` - stop/down development docker container
+* `docker:prod:up` - up production docker container
+* `docker:prod:build` - build production docker container
+* `docker:prod:down` - stop/down production docker container
+* `docker:base:build` - build base docker container
 
 ## Visual Studio Code extensions
 

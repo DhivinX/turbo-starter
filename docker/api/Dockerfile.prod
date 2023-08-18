@@ -1,0 +1,15 @@
+FROM node:18-alpine
+
+WORKDIR /app
+
+COPY ./apps/api /app/apps/api
+COPY ./packages /app/packages
+COPY ./turbo.json /app/turbo.json
+COPY ./package.json /app/package.json
+COPY ./yarn.lock /app/yarn.lock
+COPY ./.env /app/.env
+
+RUN yarn install
+RUN yarn api:build
+
+CMD yarn api:start

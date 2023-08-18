@@ -1,5 +1,5 @@
 {
-  "name": "turbo-nestjs-vue",
+  "name": "turbo-starter",
   "private": true,
   "scripts": {
     "all:dev": "dotenv -- turbo dev --no-daemon",
@@ -12,6 +12,7 @@
     "web:dev:electron": "dotenv -- turbo dev:electron --no-daemon --filter=web",
     "web:build": "dotenv -- turbo build --no-daemon --filter=web",
     "web:build:electron": "dotenv -- turbo build:electron --no-daemon --filter=web",
+    "web:start": "dotenv -- turbo start --no-daemon --filter=web",
     "nuxt:dev": "dotenv -- turbo dev --no-daemon --filter=web-nuxt",
     "nuxt:build": "dotenv -- turbo build --no-daemon --filter=web-nuxt",
     "nuxt:start": "dotenv -- turbo start --no-daemon --filter=web-nuxt",
@@ -21,7 +22,14 @@
     "mobile:ios": "dotenv -- turbo ios --no-daemon --filter=mobile",
     "test": "dotenv -- turbo test --no-daemon",
     "lint": "turbo lint --no-daemon",
-    "clean": "turbo clean --no-daemon"
+    "clean": "turbo clean --no-daemon",
+    "docker:dev:up": "docker-compose --file docker/docker-compose.dev.yml --project-directory . up",
+    "docker:dev:build": "docker-compose --file docker/docker-compose.dev.yml --project-directory . build --no-cache",
+    "docker:dev:down": "docker-compose --file docker/docker-compose.dev.yml --project-directory . down",
+    "docker:prod:up": "docker-compose --file docker/docker-compose.prod.yml --project-directory . up",
+    "docker:prod:build": "docker-compose --file docker/docker-compose.prod.yml --project-directory . build --no-cache",
+    "docker:prod:down": "docker-compose --file docker/docker-compose.prod.yml --project-directory . down",
+    "docker:base:build": "docker-compose --file docker/docker-compose.base.yml --project-directory . build --no-cache"
   },
   "packageManager": "yarn@1.22.19",
   "workspaces": [

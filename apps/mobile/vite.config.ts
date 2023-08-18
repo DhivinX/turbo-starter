@@ -19,6 +19,10 @@ export default defineConfig({
     fs: {
       allow: ['../..'],
     },
+
+    watch: {
+      usePolling: true,
+    },
   },
 
   base: process.env.VITE_IS_ELECTRON_APP ? './' : '/',
