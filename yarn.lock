@@ -1453,12 +1453,12 @@
     multer "1.4.4-lts.1"
     tslib "2.6.1"
 
-"@nestjs/schedule@^2.2.2":
-  version "2.2.3"
-  resolved "https://registry.yarnpkg.com/@nestjs/schedule/-/schedule-2.2.3.tgz#905912b43fc83323a4f992f43515c42b4b5be0c9"
-  integrity sha512-PxoGdoBwZQ6SzGfFcERTk7mDxrmesNt2cfqKgtLsFpjYNpV6ZYlKw9Ku8C0ZIjdhy0tBbysj+Fsi3sYua6o6Eg==
+"@nestjs/schedule@^3.0.2":
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/@nestjs/schedule/-/schedule-3.0.2.tgz#0be6ff93adfedf081b216a2c69a70ea69a6acf78"
+  integrity sha512-INhpzkyquosLbVrXx4v+rfAnomwBTgKQvs7e9BZ2LSZdWQOqCQD2PmvWDiu8c4wdJIH6wcWQh98w5KxIcKuVBA==
   dependencies:
-    cron "2.3.1"
+    cron "2.4.0"
     uuid "9.0.0"
 
 "@nestjs/schematics@^10.0.0", "@nestjs/schematics@^10.0.1":
@@ -4869,10 +4869,10 @@ create-require@^1.1.0, create-require@^1.1.1:
   resolved "https://registry.yarnpkg.com/create-require/-/create-require-1.1.1.tgz#c1d7e8f1e5f6cfc9ff65f9cd352d37348756c333"
   integrity sha512-dcKFX3jn0MpIaXjisoRvexIJVEKzaq7z2rZKxf+MSr9TkdmHmsU4m2lcLojrj/FHl8mk5VxMmYA+ftRkP/3oKQ==
 
-cron@2.3.1:
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/cron/-/cron-2.3.1.tgz#71caa566ffef60ada9183b8677df4afa9a214ad7"
-  integrity sha512-1eRRlIT0UfIqauwbG9pkg3J6CX9A6My2ytJWqAXoK0T9oJnUZTzGBNPxao0zjodIbPgf8UQWjE62BMb9eVllSQ==
+cron@2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/cron/-/cron-2.4.0.tgz#bdb2fcf896c072ba9dbc2f932ccd6daf3ad243b5"
+  integrity sha512-Cx77ic1TyIAtUggr0oAhtS8MLzPBUqGNIvdDM7jE3oFIxfe8LXWI9q3iQN/H2CebAiMir53LQKWOhEKnzkJTAQ==
   dependencies:
     luxon "^3.2.1"
 
