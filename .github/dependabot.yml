@@ -1,0 +1,11 @@
+version: 2
+updates:
+  - package-ecosystem: "yarn"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    ignore:
+      - dependency-name: "electron"
+      - dependency-name: "electron-builder"
+      - dependency-name: "sass"
+    open-pull-requests-limit: 5
