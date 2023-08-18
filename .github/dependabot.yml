@@ -3,9 +3,9 @@ updates:
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
-      interval: "daily"
+      interval: "weekly"
     ignore:
       - dependency-name: "electron"
       - dependency-name: "electron-builder"
       - dependency-name: "sass"
-    open-pull-requests-limit: 5
+    open-pull-requests-limit: 20
