@@ -75,10 +75,10 @@ yarn web:dev
 # Note that you need to create the .env file in the project root directory beforehand
 # You can copy the .env.example file and rename it to .env
 # Then you can configure database access and other server settings
-yarn run api:dev
+yarn api:dev
 
 # 6. Or run API and WEB projects with hot reload parallel
-yarn run all:dev
+yarn all:dev
 
 ```
 
