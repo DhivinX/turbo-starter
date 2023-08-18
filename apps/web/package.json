@@ -9,7 +9,8 @@
     "build": "vite build",
     "build:electron": "cross-env VITE_IS_ELECTRON_APP=true vite build && electron-builder",
     "lint": "eslint \"{src,apps,libs,test,electron}/**/*.{ts,vue,js}\" --fix",
-    "clean": "eslint \"{src,apps,libs,test,electron}/**/*.{ts,vue,js}\" --fix"
+    "clean": "rimraf dist",
+    "test": "vitest"
   },
   "dependencies": {
     "@quasar/extras": "1.16.4",
