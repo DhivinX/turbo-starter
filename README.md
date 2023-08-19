@@ -156,7 +156,7 @@ DATABASE_ENABLE_SYNC=true
 * Click the little gear icon of "TypeScript and JavaScript Language Features", and select "Disable (Workspace)".
 * Reload the workspace. Takeover mode will be enabled when you open a Vue or TS file.
 
-More info here: https://vuejs.org/guide/typescript/overview.html#takeover-mode
+More info here: https://vuejs.org/guide/typescript/overview.html#volar-takeover-mode
 
 ## Top-Level Scripts
  
