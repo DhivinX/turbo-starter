@@ -3,14 +3,16 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   srcDir: './src',
 
-  runtimeConfig: {
-    public: {
-      apiBase: process.env.PAYLOAD_URL + '/api' || 'http://localhost:3030/api',
-    },
-  },
-
   devServer: {
     port: 8081,
+  },
+
+  vite: {
+    server: {
+      watch: {
+        usePolling: true,
+      },
+    },
   },
 
   typescript: {

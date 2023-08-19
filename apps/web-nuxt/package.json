@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "nuxt dev",
+    "dev": "cross-env CHOKIDAR_USEPOLLING=1 nuxt dev",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
@@ -23,6 +23,7 @@
     "tailwindcss": "^3.3.2",
     "tsconfig": "*",
     "typescript": "latest",
+    "cross-env": "^7.0.3",
     "vitest": "^0.34.2",
     "vue-tsc": "^1.8.0"
   }
