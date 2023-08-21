@@ -12,7 +12,7 @@
     "config": "*",
     "tsconfig": "*",
     "typescript": "latest",
-    "zod": "^3.21.4",
+    "zod": "^3.22.2",
     "zod-openapi": "^2.7.4"
   }
 }
