@@ -16,7 +16,7 @@
     "@capacitor/core": "^5.0.4",
     "@quasar/extras": "1.16.5",
     "@vee-validate/i18n": "^4.11.2",
-    "@vee-validate/zod": "^4.11.1",
+    "@vee-validate/zod": "^4.11.2",
     "@vueuse/core": "^10.1.2",
     "@vueuse/integrations": "^10.1.2",
     "axios": "^1.4.0",
