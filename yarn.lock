@@ -2744,10 +2744,10 @@
     hookable "^5.5.3"
     unhead "1.3.4"
 
-"@vee-validate/i18n@^4.11.1":
-  version "4.11.1"
-  resolved "https://registry.yarnpkg.com/@vee-validate/i18n/-/i18n-4.11.1.tgz#2170b28598306a42a935be8073621f45275fc352"
-  integrity sha512-HhQwkz+G8PoXv6A3dnttSAslbCXw3ecJI9LF1UQHEoWs/vEYnSH746jf0q6RzDzdJ+7jD3KmS9ahsl658I/qQg==
+"@vee-validate/i18n@^4.11.2":
+  version "4.11.2"
+  resolved "https://registry.yarnpkg.com/@vee-validate/i18n/-/i18n-4.11.2.tgz#317cb37f579b3c559d89e6c14fa293ad5dadd080"
+  integrity sha512-3wk3fxV1rUwotfzBD0rdhNGRk8/4ShSfnaevGp1euU9UugNrrKoe8ed1fdhLZZ6LCFhPTk+1gNUXGwxyrwCahA==
 
 "@vee-validate/zod@^4.11.1":
   version "4.11.1"
