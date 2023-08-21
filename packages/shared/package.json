@@ -9,10 +9,12 @@
   },
   "dependencies": {
     "@nestjs/swagger": "^7.1.6",
-    "config": "*",
-    "tsconfig": "*",
-    "typescript": "latest",
-    "zod": "^3.21.4",
+    "zod": "^3.22.2",
     "zod-openapi": "^2.7.4"
+  },
+  "devDependencies": {
+    "typescript": "latest",
+    "config": "*",
+    "tsconfig": "*"
   }
 }

@@ -10,11 +10,6 @@ module.exports = function (options, webpack) {
   //   libraryTarget: 'umd',
   // };
 
-  options.watchOptions = {
-    ...options.watchOptions,
-    poll: true,
-  };
-
   options.externals = [
     nodeExternals({
       allowlist: allowlistExternals,
@@ -26,6 +21,11 @@ module.exports = function (options, webpack) {
   ];
 
   if (!process.env.PRODUCTION) {
+    options.watchOptions = {
+      ...options.watchOptions,
+      poll: true,
+    };
+
     options.entry = ['webpack/hot/poll?100', options.entry];
 
     options.plugins = [
