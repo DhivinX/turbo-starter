@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@quasar/extras": "1.16.5",
-    "@vee-validate/i18n": "^4.11.2",
+    "@vee-validate/i18n": "^4.11.3",
     "@vee-validate/zod": "^4.11.2",
     "@vueuse/core": "^10.4.1",
     "@vueuse/integrations": "^10.4.1",

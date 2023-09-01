@@ -3085,10 +3085,10 @@
     hookable "^5.5.3"
     unhead "1.4.1"
 
-"@vee-validate/i18n@^4.11.2":
-  version "4.11.2"
-  resolved "https://registry.yarnpkg.com/@vee-validate/i18n/-/i18n-4.11.2.tgz#317cb37f579b3c559d89e6c14fa293ad5dadd080"
-  integrity sha512-3wk3fxV1rUwotfzBD0rdhNGRk8/4ShSfnaevGp1euU9UugNrrKoe8ed1fdhLZZ6LCFhPTk+1gNUXGwxyrwCahA==
+"@vee-validate/i18n@^4.11.3":
+  version "4.11.3"
+  resolved "https://registry.yarnpkg.com/@vee-validate/i18n/-/i18n-4.11.3.tgz#c8d657e2a0f364ef294fed33bc6f945527801cdb"
+  integrity sha512-9KWyplhcwLVTw1MDnrHFe92xnmGwY93h5dG2Fa8n+zb9brfyzD5j366B+WWMJK86yBEKrStZomBohTLLdnVlxg==
 
 "@vee-validate/zod@^4.11.2":
   version "4.11.2"
