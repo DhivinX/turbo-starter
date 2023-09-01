@@ -37,7 +37,7 @@
     "packages/*"
   ],
   "devDependencies": {
-    "@turbo/gen": "^1.9.7",
+    "@turbo/gen": "^1.10.13",
     "cpx": "^1.5.0",
     "dotenv-cli": "^7.2.1",
     "rimraf": "^5.0.1",
