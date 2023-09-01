@@ -10,7 +10,7 @@
   "dependencies": {
     "@nestjs/swagger": "^7.1.6",
     "zod": "^3.22.2",
-    "zod-openapi": "^2.7.4"
+    "zod-openapi": "^2.9.0"
   },
   "devDependencies": {
     "typescript": "latest",
