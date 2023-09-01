@@ -14210,10 +14210,10 @@ zip-stream@^4.1.0:
     compress-commons "^4.1.0"
     readable-stream "^3.6.0"
 
-zod-openapi@^2.7.4:
-  version "2.8.0"
-  resolved "https://registry.yarnpkg.com/zod-openapi/-/zod-openapi-2.8.0.tgz#27bbc64ddecbee740bfe6c18b7d1c4c7a927a92d"
-  integrity sha512-HQum9kMqqEOmcCff9TKk2V3vHRNfPLW7NpUf12wo24lGnGfth5w9fZExTHFfoBs6HWL4H5syUSd3XOxTE3gHRw==
+zod-openapi@^2.9.0:
+  version "2.9.0"
+  resolved "https://registry.yarnpkg.com/zod-openapi/-/zod-openapi-2.9.0.tgz#4cb60860f22a083bf9726c9ac956fe63a66ddad1"
+  integrity sha512-jPR+RdDp8RJnqvLoU72pMDjXSKC+2JdruU2/oX/jZiHzNndOuRs2nPcnLukroACBsqXSEe/7tmgovXmcns4U2w==
 
 zod-to-json-schema@^3.21.4:
   version "3.21.4"
