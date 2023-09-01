@@ -30,7 +30,7 @@
     "zod": "^3.22.2"
   },
   "devDependencies": {
-    "@capacitor/android": "^5.0.4",
+    "@capacitor/android": "^5.3.0",
     "@capacitor/cli": "^5.0.4",
     "@capacitor/ios": "^5.3.0",
     "@intlify/unplugin-vue-i18n": "^0.12.3",
