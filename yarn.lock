@@ -1504,12 +1504,12 @@
     path-to-regexp "3.2.0"
     swagger-ui-dist "5.3.1"
 
-"@nestjs/testing@^10.2.0":
-  version "10.2.0"
-  resolved "https://registry.yarnpkg.com/@nestjs/testing/-/testing-10.2.0.tgz#34a9830d0f77e373aa58b9ccf2c0b161293019c6"
-  integrity sha512-jJjk76maTh2rFq7DR0E3KagI6dt9RIiym+ifjsswZml3lALoHSRAyQFhXdx1biLs0GhGTk+mw75intmsG50rjQ==
+"@nestjs/testing@^10.2.2":
+  version "10.2.2"
+  resolved "https://registry.yarnpkg.com/@nestjs/testing/-/testing-10.2.2.tgz#000e38cb058b5aa46e5a7dfecc17ae6dd5d88164"
+  integrity sha512-zczk6gLfxyVz+rxdNkplGZHM7xpKuknbeYZCCY1CppnAsaCNbFDcqtBdYlDy0mAaUFXv9BFcOC6rWPUXg0KZ1Q==
   dependencies:
-    tslib "2.6.1"
+    tslib "2.6.2"
 
 "@nestjs/typeorm@^10.0.0":
   version "10.0.0"
