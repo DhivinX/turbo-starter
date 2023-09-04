@@ -9771,10 +9771,10 @@ nest-commander@^3.7.1:
     cosmiconfig "8.2.0"
     inquirer "8.2.5"
 
-nestjs-zod@^2.3.3:
-  version "2.3.3"
-  resolved "https://registry.yarnpkg.com/nestjs-zod/-/nestjs-zod-2.3.3.tgz#288481d9b8855cecdf96a798cfbdbc90291dc8aa"
-  integrity sha512-9tadyQD/d+9A6QY8TmmaW7jwihYMA/OhNPxX0zCVQKOJBUL0w4NdqwZx+AatqLWQP6GQnW7iUKKrlRlu2s50gA==
+nestjs-zod@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/nestjs-zod/-/nestjs-zod-3.0.0.tgz#1e8a016d0ad38b6a8169fa504ae39828da75c6db"
+  integrity sha512-vL9CHShCVj6TmjCVPOd4my46D8d7FdoB4nQvvh+lmVTuzvnwuD+slSxjT4EDdPDWDFtjhfpvQnnkr55/80KHEQ==
   dependencies:
     merge-deep "^3.0.3"
 

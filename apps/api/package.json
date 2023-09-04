@@ -29,7 +29,7 @@
     "pg": "^8.11.3",
     "helmet": "^7.0.0",
     "jwks-rsa": "^3.0.1",
-    "nestjs-zod": "^2.3.3",
+    "nestjs-zod": "^3.0.0",
     "passport": "^0.6.0",
     "passport-jwt": "^4.0.1",
     "reflect-metadata": "^0.1.13",
