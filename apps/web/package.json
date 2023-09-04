@@ -21,7 +21,7 @@
     "@vueuse/integrations": "^10.4.1",
     "axios": "^1.5.0",
     "pinia": "^2.1.3",
-    "quasar": "^2.12.5",
+    "quasar": "^2.12.6",
     "shared": "*",
     "vee-validate": "^4.11.2",
     "vue": "^3.3.4",
