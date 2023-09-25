@@ -2827,10 +2827,10 @@
     hookable "^5.5.3"
     unhead "1.4.1"
 
-"@vee-validate/i18n@^4.11.3":
-  version "4.11.3"
-  resolved "https://registry.yarnpkg.com/@vee-validate/i18n/-/i18n-4.11.3.tgz#c8d657e2a0f364ef294fed33bc6f945527801cdb"
-  integrity sha512-9KWyplhcwLVTw1MDnrHFe92xnmGwY93h5dG2Fa8n+zb9brfyzD5j366B+WWMJK86yBEKrStZomBohTLLdnVlxg==
+"@vee-validate/i18n@^4.11.7":
+  version "4.11.7"
+  resolved "https://registry.yarnpkg.com/@vee-validate/i18n/-/i18n-4.11.7.tgz#002d8da968392a59198610cb8fe6bc966c7f8ebe"
+  integrity sha512-m648JC3fQTbKAr896UOdNbsGzqlf+F5q+7B44xl7Dd9GO9sr/+ELng00cz9sk0RU1dODoEKq4Md1mkywsTxg5w==
 
 "@vee-validate/zod@^4.11.2":
   version "4.11.3"
