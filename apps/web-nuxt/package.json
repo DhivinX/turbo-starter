@@ -24,7 +24,7 @@
     "tsconfig": "*",
     "typescript": "latest",
     "cross-env": "^7.0.3",
-    "vitest": "^0.34.2",
+    "vitest": "^0.34.5",
     "vue-tsc": "^1.8.0"
   }
 }
