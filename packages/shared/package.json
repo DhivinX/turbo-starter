@@ -8,7 +8,7 @@
     "lint": "eslint . --fix"
   },
   "dependencies": {
-    "@nestjs/swagger": "^7.1.6",
+    "@nestjs/swagger": "^7.1.13",
     "zod": "^3.22.2",
     "zod-openapi": "^2.9.0"
   },
