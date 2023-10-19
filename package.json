@@ -31,7 +31,7 @@
     "docker:prod:down": "docker-compose --file docker/docker-compose.prod.yml --project-directory . down",
     "docker:base:build": "docker-compose --file docker/docker-compose.base.yml --project-directory . build --no-cache"
   },
-  "packageManager": "yarn@1.22.19",
+  "packageManager": "pnpm@8.7.6",
   "workspaces": [
     "apps/*",
     "packages/*"
