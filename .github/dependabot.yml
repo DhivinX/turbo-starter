@@ -9,4 +9,10 @@ updates:
       - dependency-name: "electron"
       - dependency-name: "electron-builder"
       - dependency-name: "sass"
+
+    groups:
+      dependencies:
+        patterns:
+          - "*"
+
     open-pull-requests-limit: 20
