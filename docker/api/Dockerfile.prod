@@ -6,21 +6,27 @@ COPY ./apps/api /app/apps/api
 COPY ./packages /app/packages
 COPY ./turbo.json /app/turbo.json
 COPY ./package.json /app/package.json
-COPY ./yarn.lock /app/yarn.lock
+COPY ./.npmrc /app/.npmrc
+COPY ./pnpm-lock.yaml /app/pnpm-lock.yaml
+COPY ./pnpm-workspace.yaml /app/pnpm-workspace.yaml
 
-RUN yarn install
-RUN yarn api:build
+RUN npm i pnpm -g
+RUN pnpm install
+RUN pnpm api:build
 
 FROM node:18-alpine as runtime
 
 WORKDIR /app
 
 COPY --from=build /app/package.json /app/package.json
+COPY --from=build /app/.npmrc /app/.npmrc
+COPY --from=build /app/pnpm-workspace.yaml /app/pnpm-workspace.yaml
+COPY --from=build /app/pnpm-workspace.yaml /app/pnpm-workspace.yaml
 COPY --from=build /app/apps/api/dist /app/apps/api/dist
 COPY --from=build /app/apps/api/public /app/apps/api/public
 COPY --from=build /app/apps/api/package.json /app/apps/api/package.json
 
-RUN yarn install --production --frozen-lockfile && \
-  yarn cache clean
+RUN npm i pnpm -g
+RUN pnpm install --prod --frozen-lockfile
 
 CMD node apps/api/dist/main.js

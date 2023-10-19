@@ -16,7 +16,7 @@ export interface UsePromiseStateRetrun<TResult, TError, TPayload> {
 
 export function usePromiseState<TResult, TError = unknown, TPayload = any>(
   promise: (payload?: any) => Promise<TResult>,
-  onError?: (e: TError) => void
+  onError?: (e: TError) => void,
 ): UsePromiseStateRetrun<TResult, TError, TPayload> {
   const isReady = ref<boolean>(false);
   const isLoading = ref<boolean>(false);

@@ -16,7 +16,7 @@ async function bootstrap() {
   const server = express();
   const app = await NestFactory.create<NestExpressApplication>(
     AppModule,
-    new ExpressAdapter(server)
+    new ExpressAdapter(server),
   );
 
   const logger = new Logger('APP');
@@ -36,7 +36,7 @@ async function bootstrap() {
       directives: {
         'img-src': [`'self'`, 'https: data:'],
       },
-    })
+    }),
   );
 
   app.use(cookieParser());

@@ -8,6 +8,10 @@
     }
   },
 
+  "exclude": [
+    "dist/**/*"
+  ],
+
   "include": [
     "./src/components.d.ts",
     "**/*.js",

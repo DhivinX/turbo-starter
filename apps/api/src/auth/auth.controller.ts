@@ -17,7 +17,7 @@ export class AuthController {
     @Req() request: Request,
     @Res({ passthrough: true }) response: Response,
     @AuthSession() session: Session,
-    @Body() authLoginDto: AuthLoginDto
+    @Body() authLoginDto: AuthLoginDto,
   ): Promise<AuthLoginResponse> {
     return this.authService.login(request, response, session, authLoginDto);
   }
@@ -26,7 +26,7 @@ export class AuthController {
   async logout(
     @AuthSession() session: Session,
     @Req() request: Request,
-    @Res({ passthrough: true }) response: Response
+    @Res({ passthrough: true }) response: Response,
   ): Promise<boolean> {
     return this.authService.logout(request, response, session);
   }

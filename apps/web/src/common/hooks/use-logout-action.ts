@@ -58,7 +58,7 @@ export function useLogoutAction(): UseLogoutActionReturn<void, unknown, undefine
         message: t('account_logout_failed'),
         timeout: 1000,
       });
-    }
+    },
   );
 
   function logout(): void {
