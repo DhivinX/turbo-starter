@@ -52,7 +52,7 @@ This repository serves as a ready-to-use toolkit and project skeleton that enabl
 
 Suggest to install globally in dev environment:
 
-- [yarn](https://yarnpkg.com/getting-started)
+- [pnpm](https://pnpm.io/pnpm-cli)
 - [nest-cli](https://docs.nestjs.com/cli/overview)
 
 ## Getting Started
@@ -66,19 +66,19 @@ git clone https://github.com/DhivinX/turbo-starter.git
 cd turbo-starter
 
 # 3. Install the project and build packages in libs folder
-yarn install
+pnpm install
 
 # 4. Dev: Run web with hot reload 
-yarn web:dev
+pnpm web:dev
 
 # 5. Dev: Run API project with hot reload 
 # Note that you need to create the .env file in the project root directory beforehand
 # You can copy the .env.example file and rename it to .env
 # Then you can configure database access and other server settings
-yarn api:dev
+pnpm api:dev
 
 # 6. Or run API and WEB projects with hot reload parallel
-yarn all:dev
+pnpm all:dev
 
 ```
 
@@ -97,10 +97,10 @@ cd turbo-starter
 cp env.example .env.dev
 
 # 4. Build image:
-yarn docker:dev:build
+pnpm docker:dev:build
 
 # 5. Run API and WEB projects development process with hot reload in docker container 
-yarn docker:dev:up
+pnpm docker:dev:up
 
 ```
 
