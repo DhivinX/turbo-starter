@@ -50,17 +50,17 @@ export class UsersService {
 
   async updateSelfPassword(
     user: User,
-    userUpdateSelfPasswordDto: UserUpdateSelfPasswordDto
+    userUpdateSelfPasswordDto: UserUpdateSelfPasswordDto,
   ): Promise<UserProfileResponse> {
     const oldHash = hashPassword(
       userUpdateSelfPasswordDto.password,
-      this.configService.get<string>('secrets.pwdsalt')
+      this.configService.get<string>('secrets.pwdsalt'),
     );
 
     if (user.hash === oldHash) {
       user.hash = hashPassword(
         userUpdateSelfPasswordDto.newPassword,
-        this.configService.get<string>('secrets.pwdsalt')
+        this.configService.get<string>('secrets.pwdsalt'),
       );
     } else {
       throw new ForbiddenException('Wrong password');
@@ -81,7 +81,7 @@ export class UsersService {
     user.email = userCreateDto.email;
     user.hash = hashPassword(
       userCreateDto.password,
-      this.configService.get<string>('secrets.pwdsalt')
+      this.configService.get<string>('secrets.pwdsalt'),
     );
     user.firstName = userCreateDto.firstName;
     user.lastName = userCreateDto.lastName;
@@ -99,7 +99,7 @@ export class UsersService {
         `LOWER(CONCAT(users.firstName, ' ', users.lastName, ' ', users.email)) LIKE :filter`,
         {
           filter: `%${paginationDto.filter.toLowerCase()}%`,
-        }
+        },
       );
 
     queryBuilder.take(paginationDto.take).skip((paginationDto.page - 1) * paginationDto.take);
@@ -146,7 +146,7 @@ export class UsersService {
     if (userUpdateDto.password.length)
       user.hash = hashPassword(
         userUpdateDto.password,
-        this.configService.get<string>('secrets.pwdsalt')
+        this.configService.get<string>('secrets.pwdsalt'),
       );
 
     user.isActive = userUpdateDto.isActive;

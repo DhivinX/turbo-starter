@@ -1,4 +1,4 @@
-import { Role, rolesByImportance } from 'shared';
+import { Role, rolesByImportance } from './';
 
 type ConditionOperator = '<' | '>' | '<=' | '>=' | '=';
 

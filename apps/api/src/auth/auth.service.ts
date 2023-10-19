@@ -15,21 +15,21 @@ import { UsersService } from '@/users/users.service';
 export class AuthService {
   constructor(
     private readonly configService: ConfigService,
-    private readonly usersService: UsersService
+    private readonly usersService: UsersService,
   ) {}
 
   async login(
     request: Request,
     response: Response,
     oldSession: Session,
-    authLoginDto: AuthLoginDto
+    authLoginDto: AuthLoginDto,
   ): Promise<AuthLoginResponse> {
     const user = await User.findOne({
       where: {
         email: authLoginDto.email,
         hash: hashPassword(
           authLoginDto.password,
-          this.configService.get<string>('secrets.pwdsalt')
+          this.configService.get<string>('secrets.pwdsalt'),
         ),
       },
     });
@@ -52,7 +52,7 @@ export class AuthService {
       oldSession,
       user,
       expirationTime,
-      authLoginDto.cookies
+      authLoginDto.cookies,
     );
 
     const signedToken = this.createToken(session.token);
@@ -108,7 +108,7 @@ export class AuthService {
     session: Session,
     user: User,
     expirationTime: number,
-    cookies: boolean
+    cookies: boolean,
   ): Promise<Session> {
     let token: string;
     let sessionWithThisToken: Session | null = null;

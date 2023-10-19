@@ -13,7 +13,7 @@ export function ApiQueryZod(zodSchema: ZodTypeAny): MethodDecorator {
         name: key,
         description: (schm as any).description,
         schema: schm,
-      })
+      }),
     );
   }
 

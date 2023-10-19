@@ -33,7 +33,7 @@ $axios.interceptors.response.use(
       await timeout(5000);
       return await $axios.request(error.config);
     }
-  }
+  },
 );
 
 export function onResponseSuccess(callback: ResponseSuccessCallback): void {

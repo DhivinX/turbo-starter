@@ -27,7 +27,7 @@ export const useAppStore = defineStore('app', () => {
     () => {
       title.value = t(`routes_${route.name.toString()}`) + ' - ' + t(`app_name`);
       state.routeTitle = t(`routes_${route.name.toString()}`);
-    }
+    },
   );
 
   return { state };

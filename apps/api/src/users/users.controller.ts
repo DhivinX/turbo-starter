@@ -35,7 +35,7 @@ export class UsersController {
   @Put('/self')
   async updateSelf(
     @AuthUser() user: User,
-    @Body() userUpdateSelfDto: UserUpdateSelfDto
+    @Body() userUpdateSelfDto: UserUpdateSelfDto,
   ): Promise<UserProfileResponse> {
     return await this.usersService.updateSelf(user, userUpdateSelfDto);
   }
@@ -43,7 +43,7 @@ export class UsersController {
   @Put('/self/password')
   async updateSelfPassword(
     @AuthUser() user: User,
-    @Body() userUpdateSelfPasswordDto: UserUpdateSelfPasswordDto
+    @Body() userUpdateSelfPasswordDto: UserUpdateSelfPasswordDto,
   ): Promise<UserProfileResponse> {
     return await this.usersService.updateSelfPassword(user, userUpdateSelfPasswordDto);
   }
@@ -55,7 +55,7 @@ export class UsersController {
 
   @Get('/')
   async getMany(
-    @Query() paginationDto: PaginationDto
+    @Query() paginationDto: PaginationDto,
   ): Promise<PaginationResponse<UserProfileResponse>> {
     return await this.usersService.getMany(paginationDto);
   }
@@ -69,7 +69,7 @@ export class UsersController {
   async updateOne(
     @AuthUser() user: User,
     @Param('id', ParseUUIDPipe) id: string,
-    @Body() userUpdateDto: UserUpdateDto
+    @Body() userUpdateDto: UserUpdateDto,
   ): Promise<UserProfileResponse> {
     if (id === user.id) throw new ForbiddenException();
     return await this.usersService.updateOne(id, userUpdateDto);
