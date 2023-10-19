@@ -161,7 +161,7 @@ const usersAction = usePromiseState<PaginationResponse<UserProfileResponse>, Res
     pagination.value.descending = descending;
 
     return res.data;
-  }
+  },
 );
 
 usersAction.execute(500, pagination.value);
