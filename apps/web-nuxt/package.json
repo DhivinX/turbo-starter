@@ -11,8 +11,7 @@
     "postinstall": "nuxt prepare",
     "lint": "eslint . --fix",
     "clean": "rimraf .output",
-    "test": "vitest",
-    "tslib": "2.6.2"
+    "test": "vitest"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
@@ -26,6 +25,7 @@
     "typescript": "latest",
     "cross-env": "^7.0.3",
     "vitest": "^0.34.2",
-    "vue-tsc": "^1.8.0"
+    "vue-tsc": "^1.8.0",
+    "tslib": "2.6.2"
   }
 }
