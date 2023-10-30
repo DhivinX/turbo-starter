@@ -245,8 +245,8 @@ importers:
         specifier: ^0.12.3
         version: 0.12.3(vue-i18n@9.4.1)
       '@quasar/vite-plugin':
-        specifier: ^1.3.3
-        version: 1.5.0(@vitejs/plugin-vue@4.3.4)(quasar@2.12.7)(vite@4.4.9)(vue@3.3.4)
+        specifier: ^1.6.0
+        version: 1.6.0(@vitejs/plugin-vue@4.3.4)(quasar@2.12.7)(vite@4.4.9)(vue@3.3.4)
       '@vitejs/plugin-vue':
         specifier: ^4.3.2
         version: 4.3.4(vite@4.4.9)(vue@3.3.4)
@@ -345,8 +345,8 @@ importers:
         specifier: ^0.12.3
         version: 0.12.3(vue-i18n@9.4.1)
       '@quasar/vite-plugin':
-        specifier: ^1.3.3
-        version: 1.5.0(@vitejs/plugin-vue@4.3.4)(quasar@2.12.7)(vite@4.4.9)(vue@3.3.4)
+        specifier: ^1.6.0
+        version: 1.6.0(@vitejs/plugin-vue@4.3.4)(quasar@2.12.7)(vite@4.4.9)(vue@3.3.4)
       '@vitejs/plugin-vue':
         specifier: ^4.3.2
         version: 4.3.4(vite@4.4.9)(vue@3.3.4)
@@ -428,6 +428,9 @@ importers:
       tsconfig:
         specifier: workspace:*
         version: link:../../packages/tsconfig
+      tslib:
+        specifier: 2.6.2
+        version: 2.6.2
       typescript:
         specifier: latest
         version: 5.2.2
@@ -3066,8 +3069,8 @@ packages:
     resolution: {integrity: sha512-3VAJS9NECr1OSHX674+3YvEMIlHclr81aZrEkoBtVqr+sX4In22Up44toua+qNFsxnoATPqzpwKOJxA3iAF71Q==}
     dev: false
 
-  /@quasar/vite-plugin@1.5.0(@vitejs/plugin-vue@4.3.4)(quasar@2.12.7)(vite@4.4.9)(vue@3.3.4):
-    resolution: {integrity: sha512-Kd4nFeWd0eAr7e+HMY8Wtmo86RjPZhCi6/bybTAyliFmS8AhZ2/oRTOGnBD9R1C6Ub3JPzC4eWFA20IlHa5A3w==}
+  /@quasar/vite-plugin@1.6.0(@vitejs/plugin-vue@4.3.4)(quasar@2.12.7)(vite@4.4.9)(vue@3.3.4):
+    resolution: {integrity: sha512-LmbV76G1CwWZbrEQhqyZpkRQTJyO3xpW55aXY1zWN+JhyUeG77CcMCEWteBVnJ6I6ehUPFDC9ONd2+WlwH6rNQ==}
     engines: {node: '>=12'}
     peerDependencies:
       '@vitejs/plugin-vue': ^2.0.0 || ^3.0.0 || ^4.0.0 || ^5.0.0-beta.0
