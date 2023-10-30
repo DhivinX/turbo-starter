@@ -423,11 +423,14 @@ importers:
         specifier: workspace:*
         version: link:../../packages/shared
       tailwindcss:
-        specifier: ^3.3.2
-        version: 3.3.3
+        specifier: ^3.3.5
+        version: 3.3.5
       tsconfig:
         specifier: workspace:*
         version: link:../../packages/tsconfig
+      tslib:
+        specifier: 2.6.2
+        version: 2.6.2
       typescript:
         specifier: latest
         version: 5.2.2
@@ -13690,8 +13693,8 @@ packages:
       tslib: 2.6.2
     dev: true
 
-  /tailwindcss@3.3.3:
-    resolution: {integrity: sha512-A0KgSkef7eE4Mf+nKJ83i75TMyq8HqY3qmFIJSWy8bNt0v1lG7jUcpGpoTFxAwYcWOphcTBLPPJg+bDfhDf52w==}
+  /tailwindcss@3.3.5:
+    resolution: {integrity: sha512-5SEZU4J7pxZgSkv7FP1zY8i2TIAOooNZ1e/OGtxIEv6GltpoiXUqWvLy89+a10qYTB1N5Ifkuw9lqQkN9sscvA==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
