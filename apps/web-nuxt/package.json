@@ -15,17 +15,17 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
-    "@nuxt/test-utils": "^3.8.1",
+    "@nuxt/test-utils": "^3.9.0",
     "config": "workspace:*",
-    "nuxt": "^3.8.1",
+    "nuxt": "^3.9.0",
     "sass": "^1.63.6",
     "shared": "workspace:*",
-    "tailwindcss": "^3.3.5",
+    "tailwindcss": "^3.4.0",
     "tsconfig": "workspace:*",
     "typescript": "latest",
     "cross-env": "^7.0.3",
-    "vitest": "^0.34.6",
-    "vue-tsc": "^1.8.22",
+    "vitest": "^1.1.1",
+    "vue-tsc": "^1.8.27",
     "tslib": "2.6.2"
   }
 }
