@@ -5,10 +5,10 @@
   "main": "dist/electron/main/index.js",
   "scripts": {
     "dev": "vite",
-    "dev:electron": "cross-env VITE_IS_ELECTRON_APP=true vite",
+    "dev-electron": "cross-env VITE_IS_ELECTRON_APP=true vite",
     "build": "vite build",
     "start": "vite preview --port 8080",
-    "build:electron": "cross-env VITE_IS_ELECTRON_APP=true vite build && electron-builder",
+    "build-electron": "cross-env VITE_IS_ELECTRON_APP=true vite build && electron-builder",
     "lint": "eslint . --fix",
     "clean": "rimraf dist",
     "test": "vitest"
