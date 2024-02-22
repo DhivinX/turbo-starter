@@ -34,6 +34,7 @@ docker-run-attach-local:
 docker-down-local:
 	@docker-compose \
 		--file $(DOCKER_COMPOSE_LOCAL) \
+		--project-directory . \
  		down --remove-orphans
 	@echo "[INFO] Local instance was successfully downed."
 
@@ -68,6 +69,7 @@ docker-run-attach-prod:
 docker-down-prod:
 	@docker-compose \
 		--file $(DOCKER_COMPOSE_PROD) \
+		--project-directory . \
  		down --remove-orphans
 	@echo "[INFO] Production instance was successfully downed."
 
