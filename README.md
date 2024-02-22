@@ -69,16 +69,16 @@ cd turbo-starter
 pnpm install
 
 # 4. Dev: Run web with hot reload 
-pnpm web:dev
+pnpm dev-web # or make dev-web
 
 # 5. Dev: Run API project with hot reload 
 # Note that you need to create the .env file in the project root directory beforehand
 # You can copy the .env.example file and rename it to .env
 # Then you can configure database access and other server settings
-pnpm api:dev
+pnpm dev-api # or make dev-api
 
 # 6. Or run API and WEB projects with hot reload parallel
-pnpm all:dev
+pnpm dev # or make dev
 
 ```
 
@@ -92,15 +92,18 @@ git clone https://github.com/DhivinX/turbo-starter.git
 # 2. Enter your newly-cloned folder
 cd turbo-starter
 
-# 3. Copy env.example to .env.dev and pass wished variables:
+# 3. Install the project and build packages in libs folder
+pnpm install
+
+# 4. Copy env.example to .env.local and pass wished variables:
 # Change DATABASE_HOST to "postgres"
-cp env.example .env.dev
+cp env.example .env.local
 
-# 4. Build image:
-pnpm docker:dev:build
+# 5. Build image:
+make docker-build-local
 
-# 5. Run API and WEB projects development process with hot reload in docker container 
-pnpm docker:dev:up
+# 6. Run API and WEB projects development process with hot reload in docker container 
+make docker-run-local
 
 ```
 
@@ -159,35 +162,42 @@ DATABASE_ENABLE_SYNC=true
 More info here: https://vuejs.org/guide/typescript/overview.html#volar-takeover-mode
 
 ## Top-Level Scripts
- 
-* `all:dev` - run all applications simultaneously with hot reload
-* `all:build` - build all packages and applications
-* `all:start` - start all applications
-* `api:dev` - run API project with hot reload
-* `api:build` - build API project application
-* `api:start` - start API project application
-* `web:dev` - run WEB project with hot reload
-* `web:dev:electron` - run WEB project in electron application with hot reload
-* `web:build` - build WEB project application
-* `web:build:electron` - build electron application with web project
-* `web:start` - boot up a local static web server that serves the files from dist
-* `nuxt:dev` - run nuxt application with hot reload
-* `nuxt:build` - build nuxt application
-* `nuxt:start` - start nuxt application
-* `mobile:dev` - run mobile application with hot reload
-* `mobile:build` - build mobile application
-* `mobile:android` - build mobile application and open in Android Studio
-* `mobile:ios` - build mobile application and open in Xcode
+
+#### DEVELOPMENT
+
+* `dev` - run all applications simultaneously with hot reload
+* `dev-api` - run API project with hot reload
+* `dev-web` - run WEB project with hot reload
+* `dev-web-electron` - run WEB project in electron application with hot reload
+* `dev-nuxt` - run nuxt application with hot reload
+* `dev-mobile` - run mobile application with hot reload
+
+#### BUILD
+
+* `build` - build all packages and applications
+* `build-api` - build API project application
+* `build-web` - build WEB project application
+* `build-web-electron` - build electron application with web project
+* `build-nuxt` - build nuxt application
+* `build-mobile` - build mobile application
+
+#### RUNNING
+
+* `start` - start all applications
+* `start-api` - start API project application
+* `start-web` - boot up a local static web server that serves the files from dist
+* `start-nuxt` - start nuxt application
+
+#### MOBILE
+
+* `mobile-android` - build mobile application and open in Android Studio
+* `mobile-ios` - build mobile application and open in Xcode
+
+#### COMMON
+
 * `test` - run tests for all packages and applications
 * `lint` - lint all packages and applications
 * `clean` - remove dist directory from all packages and applications
-* `docker:dev:up` - up development docker container
-* `docker:dev:build` - build development docker container
-* `docker:dev:down` - stop/down development docker container
-* `docker:prod:up` - up production docker container
-* `docker:prod:build` - build production docker container
-* `docker:prod:down` - stop/down production docker container
-* `docker:base:build` - build base docker container
 
 ## Visual Studio Code extensions
 
@@ -198,11 +208,7 @@ More info here: https://vuejs.org/guide/typescript/overview.html#volar-takeover-
     "vue.volar",
     "dbaeumer.vscode-eslint",
     "editorconfig.editorconfig",
-    "syler.sass-indented",
-    "eamodio.gitlens",
-    "aaron-bond.better-comments",
     "visualstudioexptteam.vscodeintellicode",
-    "pkief.material-icon-theme",
     "mikestead.dotenv",
     "firsttris.vscode-jest-runner"
   ]
@@ -219,11 +225,8 @@ More info here: https://vuejs.org/guide/typescript/overview.html#volar-takeover-
 
 ### Optional
 
-* `eamodio.gitlens` - GitLens - Git supercharged.
 * `mikestead.dotenv` - DotENV - Support for dotenv file syntax
 * `visualstudioexptteam.vscodeintellicode` - IntelliCode
-* `pkief.material-icon-theme` - Material Icon Theme in VS Code
-* `aaron-bond.better-comments` - Better Comments
 
 ## Enhancements and Bug Reports
 

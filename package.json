@@ -2,34 +2,31 @@
   "name": "turbo-starter",
   "private": true,
   "scripts": {
-    "all:dev": "dotenv -- turbo dev --no-daemon",
-    "all:build": "dotenv -- turbo build --no-daemon",
-    "all:start": "dotenv -- turbo start --no-daemon",
-    "api:dev": "dotenv -- turbo dev --no-daemon --filter=api",
-    "api:build": "dotenv -- turbo build --no-daemon --filter=api",
-    "api:start": "dotenv -- turbo start --no-daemon --filter=api",
-    "web:dev": "dotenv -- turbo dev --no-daemon --filter=web",
-    "web:dev:electron": "dotenv -- turbo dev:electron --no-daemon --filter=web",
-    "web:build": "dotenv -- turbo build --no-daemon --filter=web",
-    "web:build:electron": "dotenv -- turbo build:electron --no-daemon --filter=web",
-    "web:start": "dotenv -- turbo start --no-daemon --filter=web",
-    "nuxt:dev": "dotenv -- turbo dev --no-daemon --filter=web-nuxt",
-    "nuxt:build": "dotenv -- turbo build --no-daemon --filter=web-nuxt",
-    "nuxt:start": "dotenv -- turbo start --no-daemon --filter=web-nuxt",
-    "mobile:dev": "dotenv -- turbo dev --no-daemon --filter=mobile",
-    "mobile:build": "dotenv -- turbo build --no-daemon --filter=mobile",
-    "mobile:android": "dotenv -- turbo android --no-daemon --filter=mobile",
-    "mobile:ios": "dotenv -- turbo ios --no-daemon --filter=mobile",
+    "dev": "dotenv -- turbo dev --no-daemon",
+    "dev-api": "dotenv -- turbo dev --no-daemon --filter=api",
+    "dev-web": "dotenv -- turbo dev --no-daemon --filter=web",
+    "dev-web-electron": "dotenv -- turbo dev:electron --no-daemon --filter=web",
+    "dev-nuxt": "dotenv -- turbo dev --no-daemon --filter=web-nuxt",
+    "dev-mobile": "dotenv -- turbo dev --no-daemon --filter=mobile",
+
+    "build": "dotenv -- turbo dev --no-daemon",
+    "build-api": "dotenv -- turbo build --no-daemon --filter=api",
+    "build-web": "dotenv -- turbo build --no-daemon --filter=web",
+    "build-web-electron": "dotenv -- turbo build:electron --no-daemon --filter=web",
+    "build-nuxt": "dotenv -- turbo build --no-daemon --filter=web-nuxt",
+    "build-mobile": "dotenv -- turbo build --no-daemon --filter=mobile",
+
+    "start": "dotenv -- turbo dev --no-daemon",
+    "start-api": "dotenv -- turbo start --no-daemon --filter=api",
+    "start-web": "dotenv -- turbo start --no-daemon --filter=web",
+    "start-nuxt": "dotenv -- turbo start --no-daemon --filter=web-nuxt",
+
+    "mobile-android": "dotenv -- turbo android --no-daemon --filter=mobile",
+    "mobile-ios": "dotenv -- turbo ios --no-daemon --filter=mobile",
+
     "test": "dotenv -- turbo test --no-daemon",
     "lint": "turbo lint --no-daemon",
-    "clean": "turbo clean --no-daemon",
-    "docker:dev:up": "docker-compose --file docker/docker-compose.dev.yml --project-directory . up",
-    "docker:dev:build": "docker-compose --file docker/docker-compose.dev.yml --project-directory . build --no-cache",
-    "docker:dev:down": "docker-compose --file docker/docker-compose.dev.yml --project-directory . down",
-    "docker:prod:up": "docker-compose --file docker/docker-compose.prod.yml --project-directory . up",
-    "docker:prod:build": "docker-compose --file docker/docker-compose.prod.yml --project-directory . build --no-cache",
-    "docker:prod:down": "docker-compose --file docker/docker-compose.prod.yml --project-directory . down",
-    "docker:base:build": "docker-compose --file docker/docker-compose.base.yml --project-directory . build --no-cache"
+    "clean": "turbo clean --no-daemon"
   },
   "packageManager": "pnpm@8.7.6",
   "workspaces": [
@@ -37,10 +34,10 @@
     "packages/*"
   ],
   "devDependencies": {
-    "@turbo/gen": "^1.10.13",
+    "@turbo/gen": "^1.12.4",
     "cpx": "^1.5.0",
     "dotenv-cli": "^7.2.1",
-    "rimraf": "^5.0.1",
-    "turbo": "^1.10.13"
+    "rimraf": "^5.0.5",
+    "turbo": "^1.12.4"
   }
 }

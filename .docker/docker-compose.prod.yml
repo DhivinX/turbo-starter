@@ -6,7 +6,7 @@ services:
     image: dhivinx/turbo-starter-api:0.0.1
     build:
       context: .
-      dockerfile: ./docker/api/Dockerfile.prod
+      dockerfile: ./.docker/api/Dockerfile.prod
     env_file:
       - .env.prod
     ports:
@@ -20,7 +20,7 @@ services:
     image: dhivinx/turbo-starter-web:0.0.1
     build:
       context: .
-      dockerfile: ./docker/web/Dockerfile.prod
+      dockerfile: ./.docker/web/Dockerfile.prod
     env_file:
       - .env.prod
     ports:
@@ -30,12 +30,12 @@ services:
     restart: always
 
   postgres:
-    container_name: postgres
+    container_name: turbo-starter-postgres
     image: postgres
     env_file:
       - .env.prod
     volumes:
-      - postgres-data:/data/db
+      - turbo-starter-postgres-data:/var/lib/postgresql/data
     environment:
       - POSTGRES_DB=${DATABASE_NAME}
       - POSTGRES_USER=${DATABASE_USER}
@@ -43,5 +43,6 @@ services:
     restart: unless-stopped
 
 volumes:
-  postgres-data:
+  turbo-starter-postgres-data:
+
 

@@ -13,4 +13,4 @@ COPY ./pnpm-workspace.yaml /app/pnpm-workspace.yaml
 RUN npm i pnpm -g
 RUN pnpm install
 
-CMD pnpm api:dev
+CMD pnpm dev-api
