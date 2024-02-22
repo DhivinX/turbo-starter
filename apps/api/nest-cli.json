@@ -4,6 +4,6 @@
   "sourceRoot": "src",
   "compilerOptions": {
     "webpack": true,
-    "deleteOutDir": true
+    "deleteOutDir": false
   }
 }
