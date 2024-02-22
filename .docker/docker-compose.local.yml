@@ -17,6 +17,7 @@ services:
       - ./:/app
       - /app/node_modules
       - /app/apps/api/node_modules
+      - /app/apps/api/dist
       - /app/packages/config/node_modules
     restart: always
 
@@ -40,14 +41,14 @@ services:
     restart: always
 
   postgres:
-    container_name: postgres
+    container_name: turbo-starter-postgres
     image: postgres
     env_file:
       - .env.local
     ports:
       - '5433:${DATABASE_PORT}'
     volumes:
-      - postgres-data:/data/db
+      - turbo-starter-postgres-data:/var/lib/postgresql/data
     environment:
       - POSTGRES_DB=${DATABASE_NAME}
       - POSTGRES_USER=${DATABASE_USER}
@@ -55,6 +56,6 @@ services:
     restart: unless-stopped
 
 volumes:
-  postgres-data:
+  turbo-starter-postgres-data:
 
 
