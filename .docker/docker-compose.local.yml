@@ -3,12 +3,12 @@ version: "3.8"
 services:
   api:
     container_name: turbo-starter-api
-    image: dhivinx/turbo-starter-api:0.0.1-dev
+    image: dhivinx/turbo-starter-api:0.0.1-local
     build:
       context: .
-      dockerfile: ./docker/api/Dockerfile.dev
+      dockerfile: ./.docker/api/Dockerfile.local
     env_file:
-      - .env.dev
+      - .env.local
     ports:
       - ${API_HTTP_PORT}:${API_HTTP_PORT}
     depends_on:
@@ -22,12 +22,12 @@ services:
 
   web:
     container_name: turbo-starter-web
-    image: dhivinx/turbo-starter-web:0.0.1-dev
+    image: dhivinx/turbo-starter-web:0.0.1-local
     build:
       context: .
-      dockerfile: ./docker/web/Dockerfile.dev
+      dockerfile: ./.docker/web/Dockerfile.local
     env_file:
-      - .env.dev
+      - .env.local
     ports:
       - 8080:8080
     depends_on:
@@ -43,7 +43,7 @@ services:
     container_name: postgres
     image: postgres
     env_file:
-      - .env.dev
+      - .env.local
     ports:
       - '5433:${DATABASE_PORT}'
     volumes:
@@ -56,4 +56,5 @@ services:
 
 volumes:
   postgres-data:
+
 

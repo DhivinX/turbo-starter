@@ -12,7 +12,7 @@ COPY ./pnpm-workspace.yaml /app/pnpm-workspace.yaml
 
 RUN npm i pnpm -g
 RUN pnpm install
-RUN pnpm web:build
+RUN pnpm web-build
 
 FROM nginx:stable-alpine as runtime
 

@@ -12,7 +12,7 @@ COPY ./pnpm-workspace.yaml /app/pnpm-workspace.yaml
 
 RUN npm i pnpm -g
 RUN pnpm install
-RUN pnpm api:build
+RUN pnpm api-build
 
 FROM node:18-alpine as runtime
 
