@@ -12,7 +12,7 @@ COPY ./pnpm-workspace.yaml /app/pnpm-workspace.yaml
 
 RUN npm i pnpm -g
 RUN pnpm install
-RUN pnpm api-build
+RUN pnpm build-api
 
 FROM node:18-alpine as runtime
 
@@ -20,7 +20,6 @@ WORKDIR /app
 
 COPY --from=build /app/package.json /app/package.json
 COPY --from=build /app/.npmrc /app/.npmrc
-COPY --from=build /app/pnpm-workspace.yaml /app/pnpm-workspace.yaml
 COPY --from=build /app/pnpm-workspace.yaml /app/pnpm-workspace.yaml
 COPY --from=build /app/apps/api/dist /app/apps/api/dist
 COPY --from=build /app/apps/api/public /app/apps/api/public
