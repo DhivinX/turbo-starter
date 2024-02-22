@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { UseSchema, Role } from '../../common';
+import { Role, UseSchema } from '../../common';
 
 export const userCreateSchema = z.object({
   email: z.string().email().toLowerCase().trim(),

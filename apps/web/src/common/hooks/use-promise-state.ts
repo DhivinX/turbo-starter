@@ -1,6 +1,6 @@
+import { EventHookOn, createEventHook } from '@vueuse/core';
 import { timeout } from 'shared';
 import { reactive, ref, shallowRef } from 'vue';
-import { createEventHook, EventHookOn } from '@vueuse/core';
 
 export interface UsePromiseStateRetrun<TResult, TError, TPayload> {
   isReady: boolean;
@@ -28,7 +28,7 @@ export function usePromiseState<TResult, TError = unknown, TPayload = any>(
   const error = shallowRef<TError>(undefined);
 
   const errorEvent = createEventHook<TError>();
-  if (onError) errorEvent.on(onError);
+  if (onError) errorEvent.on(onError as any);
 
   async function execute(delay?: number, payload?: TPayload): Promise<TResult> {
     isReady.value = false;
