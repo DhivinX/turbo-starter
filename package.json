@@ -9,14 +9,14 @@
     "dev-nuxt": "dotenv -- turbo dev --no-daemon --filter=web-nuxt",
     "dev-mobile": "dotenv -- turbo dev --no-daemon --filter=mobile",
 
-    "build": "dotenv -- turbo dev --no-daemon",
+    "build": "dotenv -- turbo build --no-daemon",
     "build-api": "dotenv -- turbo build --no-daemon --filter=api",
     "build-web": "dotenv -- turbo build --no-daemon --filter=web",
     "build-web-electron": "dotenv -- turbo build:electron --no-daemon --filter=web",
     "build-nuxt": "dotenv -- turbo build --no-daemon --filter=web-nuxt",
     "build-mobile": "dotenv -- turbo build --no-daemon --filter=mobile",
 
-    "start": "dotenv -- turbo dev --no-daemon",
+    "start": "dotenv -- turbo start --no-daemon",
     "start-api": "dotenv -- turbo start --no-daemon --filter=api",
     "start-web": "dotenv -- turbo start --no-daemon --filter=web",
     "start-nuxt": "dotenv -- turbo start --no-daemon --filter=web-nuxt",
