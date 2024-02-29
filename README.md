@@ -73,7 +73,10 @@ pnpm dev-web # or make dev-web
 
 # 5. Dev: Run API project with hot reload 
 # Note that you need to create the .env file in the project root directory beforehand
+
 # You can copy the .env.example file and rename it to .env
+cp .env.example .env.local
+
 # Then you can configure database access and other server settings
 pnpm dev-api # or make dev-api
 
@@ -97,7 +100,7 @@ pnpm install
 
 # 4. Copy env.example to .env.local and pass wished variables:
 # Change DATABASE_HOST to "postgres"
-cp env.example .env.local
+cp .env.example .env.local
 
 # 5. Build image:
 make docker-build-local
