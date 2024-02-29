@@ -74,8 +74,8 @@ pnpm dev-web # or make dev-web
 # 5. Dev: Run API project with hot reload 
 # Note that you need to create the .env file in the project root directory beforehand
 
-# You can copy the .env.example file and rename it to .env
-cp .env.example .env.local
+# You should copy the .env.example file and rename it to .env
+cp .env.example .env
 
 # Then you can configure database access and other server settings
 pnpm dev-api # or make dev-api
