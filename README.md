@@ -155,14 +155,7 @@ DATABASE_ENABLE_SYNC=true
 
 ## Volar and Visual Studio Code (Takeover Mode)
 
-* Install [Volar](https://marketplace.visualstudio.com/items?itemName=vue.volar) extension
-* In your project workspace, bring up the command palette with Ctrl + Shift + P (macOS: Cmd + Shift + P).
-* Type built and select "Extensions: Show Built-in Extensions".
-* Type typescript in the extension search box (do not remove @builtin prefix).
-* Click the little gear icon of "TypeScript and JavaScript Language Features", and select "Disable (Workspace)".
-* Reload the workspace. Takeover mode will be enabled when you open a Vue or TS file.
-
-More info here: https://vuejs.org/guide/typescript/overview.html#volar-takeover-mode
+`Volar` is now `Vue - Official` extension so, takeover mode is no longer needed in version 2.0. Please enable built-in `TypeScript and JavaScript Language Features` extension, if you was disable this extension before.
 
 ## Top-Level Scripts
 
