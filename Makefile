@@ -12,6 +12,7 @@ docker-build-local:
 	@docker-compose \
  		--file $(DOCKER_COMPOSE_LOCAL) \
 		--project-directory . \
+		--env-file .env.local \
  		build \
 		--no-cache
 	@echo "[INFO] Local instance was successfully built!"
@@ -20,6 +21,7 @@ docker-run-local:
 	@docker-compose \
 		--file $(DOCKER_COMPOSE_LOCAL) \
 		--project-directory . \
+		--env-file .env.local \
 		up \
 		--detach
 	@echo "[INFO] Local instance was successfully started!"
@@ -28,6 +30,7 @@ docker-run-attach-local:
 	@docker-compose \
 		--file $(DOCKER_COMPOSE_LOCAL) \
 		--project-directory . \
+		--env-file .env.local \
 		up
 	@echo "[INFO] Local instance was successfully started and attached!"
 
@@ -35,6 +38,7 @@ docker-down-local:
 	@docker-compose \
 		--file $(DOCKER_COMPOSE_LOCAL) \
 		--project-directory . \
+		--env-file .env.local \
  		down --remove-orphans
 	@echo "[INFO] Local instance was successfully downed."
 
@@ -47,6 +51,7 @@ docker-build-prod:
 	@docker-compose \
  		--file $(DOCKER_COMPOSE_PROD) \
 		--project-directory . \
+		--env-file .env.prod \
  		build \
 		--no-cache
 	@echo "[INFO] Production instance was successfully built!"
@@ -55,6 +60,7 @@ docker-run-prod:
 	@docker-compose \
 		--file $(DOCKER_COMPOSE_PROD) \
 		--project-directory . \
+		--env-file .env.prod \
 		up \
 		--detach
 	@echo "[INFO] Production instance was successfully started!"
@@ -63,6 +69,7 @@ docker-run-attach-prod:
 	@docker-compose \
 		--file $(DOCKER_COMPOSE_PROD) \
 		--project-directory . \
+		--env-file .env.prod \
 		up
 	@echo "[INFO] Production instance was successfully started and attached!"
 
@@ -70,6 +77,7 @@ docker-down-prod:
 	@docker-compose \
 		--file $(DOCKER_COMPOSE_PROD) \
 		--project-directory . \
+		--env-file .env.prod \
  		down --remove-orphans
 	@echo "[INFO] Production instance was successfully downed."
 

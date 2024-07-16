@@ -73,7 +73,10 @@ pnpm dev-web # or make dev-web
 
 # 5. Dev: Run API project with hot reload 
 # Note that you need to create the .env file in the project root directory beforehand
-# You can copy the .env.example file and rename it to .env
+
+# You should copy the .env.example file and rename it to .env
+cp .env.example .env
+
 # Then you can configure database access and other server settings
 pnpm dev-api # or make dev-api
 
@@ -97,7 +100,7 @@ pnpm install
 
 # 4. Copy env.example to .env.local and pass wished variables:
 # Change DATABASE_HOST to "postgres"
-cp env.example .env.local
+cp .env.example .env.local
 
 # 5. Build image:
 make docker-build-local
@@ -152,14 +155,7 @@ DATABASE_ENABLE_SYNC=true
 
 ## Volar and Visual Studio Code (Takeover Mode)
 
-* Install [Volar](https://marketplace.visualstudio.com/items?itemName=vue.volar) extension
-* In your project workspace, bring up the command palette with Ctrl + Shift + P (macOS: Cmd + Shift + P).
-* Type built and select "Extensions: Show Built-in Extensions".
-* Type typescript in the extension search box (do not remove @builtin prefix).
-* Click the little gear icon of "TypeScript and JavaScript Language Features", and select "Disable (Workspace)".
-* Reload the workspace. Takeover mode will be enabled when you open a Vue or TS file.
-
-More info here: https://vuejs.org/guide/typescript/overview.html#volar-takeover-mode
+`Volar` is now `Vue - Official` extension so, takeover mode is no longer needed in version 2.0. Please enable built-in `TypeScript and JavaScript Language Features` extension, if you was disable this extension before.
 
 ## Top-Level Scripts
 
