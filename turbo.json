@@ -1,7 +1,23 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "globalDependencies": ["**/.env.*local"],
-  "pipeline": {
+  "globalDependencies": [
+    "**/.env.*local"
+  ],
+  "globalEnv": [
+    "API_PUBLIC_URL",
+    "API_HTTP_PORT",
+    "API_HTTP_CORS",
+    "DATABASE_TYPE",
+    "DATABASE_HOST",
+    "DATABASE_PORT",
+    "DATABASE_NAME",
+    "DATABASE_USER",
+    "DATABASE_PASSWORD",
+    "DATABASE_ENABLE_SYNC",
+    "API_SECRETS_PWDSALT",
+    "API_SECRETS_JWT"
+  ],
+  "tasks": {
     "dev": {
       "cache": false,
       "persistent": true
@@ -10,7 +26,9 @@
       "cache": false
     },
     "build": {
-      "dependsOn": ["^build"]
+      "dependsOn": [
+        "^build"
+      ]
     },
     "build-electron": {},
     "android": {},
