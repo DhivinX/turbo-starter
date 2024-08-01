@@ -2,42 +2,38 @@
   "name": "turbo-starter",
   "private": true,
   "scripts": {
-    "dev": "dotenv -- turbo dev --no-daemon",
-    "dev-api": "dotenv -- turbo dev --no-daemon --filter=api",
-    "dev-web": "dotenv -- turbo dev --no-daemon --filter=web",
-    "dev-web-electron": "dotenv -- turbo dev:electron --no-daemon --filter=web",
-    "dev-nuxt": "dotenv -- turbo dev --no-daemon --filter=web-nuxt",
-    "dev-mobile": "dotenv -- turbo dev --no-daemon --filter=mobile",
-
-    "build": "dotenv -- turbo build --no-daemon",
-    "build-api": "dotenv -- turbo build --no-daemon --filter=api",
-    "build-web": "dotenv -- turbo build --no-daemon --filter=web",
-    "build-web-electron": "dotenv -- turbo build:electron --no-daemon --filter=web",
-    "build-nuxt": "dotenv -- turbo build --no-daemon --filter=web-nuxt",
-    "build-mobile": "dotenv -- turbo build --no-daemon --filter=mobile",
-
-    "start": "dotenv -- turbo start --no-daemon",
-    "start-api": "dotenv -- turbo start --no-daemon --filter=api",
-    "start-web": "dotenv -- turbo start --no-daemon --filter=web",
-    "start-nuxt": "dotenv -- turbo start --no-daemon --filter=web-nuxt",
-
-    "mobile-android": "dotenv -- turbo android --no-daemon --filter=mobile",
-    "mobile-ios": "dotenv -- turbo ios --no-daemon --filter=mobile",
-
-    "test": "dotenv -- turbo test --no-daemon",
-    "lint": "turbo lint --no-daemon",
-    "clean": "turbo clean --no-daemon"
+    "dev": "dotenv -- turbo dev --no-daemon --env-mode=loose",
+    "dev-api": "dotenv -- turbo dev --no-daemon --env-mode=loose --filter=api",
+    "dev-web": "dotenv -- turbo dev --no-daemon --env-mode=loose --filter=web",
+    "dev-web-electron": "dotenv -- turbo dev:electron --no-daemon --env-mode=loose --filter=web",
+    "dev-nuxt": "dotenv -- turbo dev --no-daemon --env-mode=loose --filter=web-nuxt",
+    "dev-mobile": "dotenv -- turbo dev --no-daemon --env-mode=loose --filter=mobile",
+    "build": "dotenv -- turbo build --no-daemon --env-mode=loose",
+    "build-api": "dotenv -- turbo build --no-daemon --env-mode=loose --filter=api",
+    "build-web": "dotenv -- turbo build --no-daemon --env-mode=loose --filter=web",
+    "build-web-electron": "dotenv -- turbo build:electron --no-daemon --env-mode=loose --filter=web",
+    "build-nuxt": "dotenv -- turbo build --no-daemon --env-mode=loose --filter=web-nuxt",
+    "build-mobile": "dotenv -- turbo build --no-daemon --env-mode=loose --filter=mobile",
+    "start": "dotenv -- turbo start --no-daemon --env-mode=loose",
+    "start-api": "dotenv -- turbo start --no-daemon --env-mode=loose --filter=api",
+    "start-web": "dotenv -- turbo start --no-daemon --env-mode=loose --filter=web",
+    "start-nuxt": "dotenv -- turbo start --no-daemon --env-mode=loose --filter=web-nuxt",
+    "mobile-android": "dotenv -- turbo android --no-daemon --env-mode=loose --filter=mobile",
+    "mobile-ios": "dotenv -- turbo ios --no-daemon --env-mode=loose --filter=mobile",
+    "test": "dotenv -- turbo test --no-daemon --env-mode=loose",
+    "lint": "turbo lint --no-daemon --env-mode=loose",
+    "clean": "turbo clean --no-daemon --env-mode=loose"
   },
-  "packageManager": "pnpm@8.7.6",
+  "packageManager": "pnpm@9.0.1",
   "workspaces": [
     "apps/*",
     "packages/*"
   ],
   "devDependencies": {
-    "@turbo/gen": "^1.12.4",
+    "@turbo/gen": "^2.0.11",
     "cpx": "^1.5.0",
-    "dotenv-cli": "^7.2.1",
-    "rimraf": "^5.0.5",
-    "turbo": "^2.0.6"
+    "dotenv-cli": "^7.4.2",
+    "rimraf": "^6.0.1",
+    "turbo": "^2.0.11"
   }
 }
