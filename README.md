@@ -1,3 +1,35 @@
+
+<div align="right">
+  <details>
+    <summary >🌐 Language</summary>
+    <div>
+      <div align="center">
+        <a href="https://openaitx.github.io/view.html?user=DhivinX&project=turbo-starter&lang=en">English</a>
+        | <a href="https://openaitx.github.io/view.html?user=DhivinX&project=turbo-starter&lang=zh-CN">简体中文</a>
+        | <a href="https://openaitx.github.io/view.html?user=DhivinX&project=turbo-starter&lang=zh-TW">繁體中文</a>
+        | <a href="https://openaitx.github.io/view.html?user=DhivinX&project=turbo-starter&lang=ja">日本語</a>
+        | <a href="https://openaitx.github.io/view.html?user=DhivinX&project=turbo-starter&lang=ko">한국어</a>
+        | <a href="https://openaitx.github.io/view.html?user=DhivinX&project=turbo-starter&lang=hi">हिन्दी</a>
+        | <a href="https://openaitx.github.io/view.html?user=DhivinX&project=turbo-starter&lang=th">ไทย</a>
+        | <a href="https://openaitx.github.io/view.html?user=DhivinX&project=turbo-starter&lang=fr">Français</a>
+        | <a href="https://openaitx.github.io/view.html?user=DhivinX&project=turbo-starter&lang=de">Deutsch</a>
+        | <a href="https://openaitx.github.io/view.html?user=DhivinX&project=turbo-starter&lang=es">Español</a>
+        | <a href="https://openaitx.github.io/view.html?user=DhivinX&project=turbo-starter&lang=it">Italiano</a>
+        | <a href="https://openaitx.github.io/view.html?user=DhivinX&project=turbo-starter&lang=ru">Русский</a>
+        | <a href="https://openaitx.github.io/view.html?user=DhivinX&project=turbo-starter&lang=pt">Português</a>
+        | <a href="https://openaitx.github.io/view.html?user=DhivinX&project=turbo-starter&lang=nl">Nederlands</a>
+        | <a href="https://openaitx.github.io/view.html?user=DhivinX&project=turbo-starter&lang=pl">Polski</a>
+        | <a href="https://openaitx.github.io/view.html?user=DhivinX&project=turbo-starter&lang=ar">العربية</a>
+        | <a href="https://openaitx.github.io/view.html?user=DhivinX&project=turbo-starter&lang=fa">فارسی</a>
+        | <a href="https://openaitx.github.io/view.html?user=DhivinX&project=turbo-starter&lang=tr">Türkçe</a>
+        | <a href="https://openaitx.github.io/view.html?user=DhivinX&project=turbo-starter&lang=vi">Tiếng Việt</a>
+        | <a href="https://openaitx.github.io/view.html?user=DhivinX&project=turbo-starter&lang=id">Bahasa Indonesia</a>
+        | <a href="https://openaitx.github.io/view.html?user=DhivinX&project=turbo-starter&lang=as">অসমীয়া</
+      </div>
+    </div>
+  </details>
+</div>
+
 <p align="center">
   <a href="https://turborepo.com/" target="blank"><img src="https://user-images.githubusercontent.com/4060187/106504110-82f58d00-6494-11eb-87b7-a16d4f68bc5a.png" width="350" alt="Turborepo Logo" /></a>
 <p>
